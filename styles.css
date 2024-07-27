@@ -1,0 +1,249 @@
+:root {
+    --primary-color: rgb(226, 111, 111);
+    --secondary-color: rgb(224, 210, 210);
+    --tertiary-color: rgb(15, 231, 247);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.sidebar svg,
+.header svg {
+    width: 25px;
+    height: auto;
+}
+
+.sidebar svg {
+    fill: white;
+}
+
+.logo svg {
+    width: 40px;
+    height: auto;
+}
+
+.header .profile .profile-picture,
+.trending-card img  {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    font-family: "Roboto";
+}
+
+.sidebar {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 16px;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sidebar ul li,
+.logo{
+    display: flex;
+    gap: 20px;
+}
+
+.header {
+    padding: 16px 32px;
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 25px; 
+}
+
+.header .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header input {
+    flex: 1;
+    border-style: none;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    padding: 6px 6px 6px 12px;
+}
+
+.header input:focus {
+    outline-style: none;
+}
+
+.header .profile {
+    justify-self: end;
+
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.header .welcome img{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+.header .welcome {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header .welcome div {
+    display: inline-block;
+}
+
+.header p {
+    font-weight: 700;
+}
+
+.header p:nth-child(2) {
+    font-size: 28px;
+}
+
+.header .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+}
+
+.header .buttons button {
+    background-color: var(--primary-color);
+    border-style: none;
+    color: white;
+    padding: 8px 32px;
+    border-radius: 25px;
+}
+
+.main {
+    grid-column: 2 / 3;
+    padding: 16px;
+
+    background-color: var(--secondary-color);
+    box-shadow: inset;
+
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    grid-row: 1 / span 2;
+}
+
+.main .your-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.main .your-projects .project-card {
+    background-color: white;
+    padding: 16px;  
+    border-left-style: solid;
+    border-left-color: var(--tertiary-color);
+    border-left-width: 12px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;  
+}
+
+.project-card p,
+.announcement-card p, 
+.trending-card > div p:last-child {
+    color: gray;
+}
+
+.main .your-projects svg {
+    width: 25px;
+    height: auto;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-card {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+}
+
+.trending-people{
+    display: grid;
+    gap: 16px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.your-announcements {
+    display: grid;
+    background-color: white;
+    padding: 0px 16px;
+    border-radius: 8px;
+}
+
+.announcement-card {
+    border-bottom-style: solid;
+    border-bottom-color: gainsboro;
+    padding: 8px 0px 8px 0px;
+}
+
+.announcement-card:first-child {
+    padding-top: 16px;
+}
+
+.announcement-card:last-child {
+    border-bottom-style: none;
+    padding-bottom: 16px;
+}
+
+.announcement-card h3 {
+    font-size: 14px;
+} 
+
+.announcement-card p {
+    font-size: 12px;
+}
+
+.icons {
+    display: flex;
+    gap: 16px;
+    align-self: end;
+}
+
+h1 {
+    display: inline-block;
+}
